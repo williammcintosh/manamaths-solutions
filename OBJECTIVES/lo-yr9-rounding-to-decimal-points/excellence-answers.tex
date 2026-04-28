@@ -1,0 +1,116 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmanswerColor}{HTML}{306A3A}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.45em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMAnswer}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} \textcolor{mmanswerColor}{\textbf{#2}}\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+\begin{document}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks — Answers}{3}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{1}{14.260}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{2}{3.142}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{3}{2.718}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{4}{1.414}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{5}{4.795, 4.80}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{6}{Both have same significance}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{7}{3.142}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{8}{2.718}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{9}{0.318}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks — Answers}{3}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{10}{1.00}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{11}{12.05}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{12}{4.44}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{13}{2.8, 2.9, 2.9}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{14}{6.21, 6.19}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{15}{5.05 rounds up (digit is 5), 5.04 rounds down (digit is 4)}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{16}{3.28 m}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{17}{Both round to 8.68 (equal)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{18}{8.5}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks — Answers}{3}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{19}{4.75, 4.84}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{20}{7.345, 7.354}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{21}{The thousandths digit is 0 < 5, so the hundredths digit stays}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{22}{Correct (4 < 5 so 6.1 stays; result 6.2)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{23}{14.00}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{24}{3.00}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{25}{4.95 rounds higher (to 5.0 vs 4.9)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{26}{1.244}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{27}{0.00}\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

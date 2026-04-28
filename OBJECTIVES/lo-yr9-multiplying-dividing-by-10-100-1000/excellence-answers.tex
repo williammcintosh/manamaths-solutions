@@ -1,0 +1,116 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmanswerColor}{HTML}{306A3A}
+\definecolor{mmtext}{HTML}{163221}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.45em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMAnswer}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} \textcolor{mmanswerColor}{\textbf{#2}}\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+\begin{document}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks — Answers}{3}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{1}{3700}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{2}{$3.6 \div 10 = 0.36$, $0.4 \div 10 = 0.04$, $0.2 \div 10 = 0.02$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{3}{$0.004$ km $= 4$ m}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{4}{$360$ mm $= 0.36$ m}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{5}{$5000$ g $= 5$ kg}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{6}{$0.034$ L $= 34$ mL}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{7}{$0.0015 \times 1000 = 1.5$ mL}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{8}{$0.6 \times 0.04 \times 200 = 4.8$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{9}{$3 \times 1000 + 4 \times 100 + 5 \times 10 + 6 = 3456$}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks — Answers}{3}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{10}{$0.0036$ t}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{11}{$\times 1000$ (1 KB = 1000 bytes)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{12}{$1250$ mL}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{13}{2 places left}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{14}{3 places right}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{15}{Both equal 40.8 (equal)}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{16}{Both equal 72 (equal)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{17}{No; e.g., $3.4 \times 10 = 34$, not 3.40}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{18}{Move digits 2 places right. E.g., $500 \div 100 = 5$}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks — Answers}{3}
+\vspace{0.02em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{19}{608}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{20}{0.0524}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{21}{700.5}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{22}{840}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{23}{Both equal 390 (equal)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{24}{Both equal 0.056 (equal)}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{25}{3 places left}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{26}{1 place right}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{27}{Different number of zeros: $100$ has 2, $10$ has 1}\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}
