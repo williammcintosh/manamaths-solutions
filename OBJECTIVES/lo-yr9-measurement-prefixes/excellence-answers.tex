@@ -1,0 +1,120 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmanswerColor}{HTML}{306A3A}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMAnswer}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} \textcolor{mmanswerColor}{\textbf{#2}}\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}
+\begin{frame}[t]
+\WorksheetTitle{Measurement prefixes --- Answers}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{1}{2500 g}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{2}{2500000 mg}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{3}{15000 cm	extsuperscript{2}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{4}{6 glasses}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{5}{1800 m}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{6}{Correct}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{7}{10 m/s}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{8}{0.01 km}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{9}{2400 mL}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Measurement prefixes --- Answers}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{10}{750000 mm	extsuperscript{2}}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{11}{4200 L}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{12}{24 pieces}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{13}{8 m}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{14}{650 g}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{15}{8 bottles}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{16}{1200 mm	extsuperscript{2}}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{17}{1.8 MHz}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{18}{3500000 Hz}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Measurement prefixes --- Answers}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{19}{5 L}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{20}{45 km}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{21}{450 mg}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{22}{450000 ug}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{23}{0.003 km}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{24}{9600 m	extsuperscript{2}}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{25}{0.96 ha}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{26}{80 mL/km}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{27}{200 L}\end{column}
+\end{columns}
+\end{frame}
+\end{document}

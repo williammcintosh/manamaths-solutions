@@ -1,0 +1,120 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmanswerColor}{HTML}{306A3A}
+
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMAnswer}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} \textcolor{mmanswerColor}{\textbf{#2}}\par\end{MMProblemCard}}
+
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+
+% Default worksheet generation rules:
+% use notes-style beamer pages
+% use bordered cards for individual problems
+% target 9 problems per frame in a 3x3 grid
+% target 3 frames per scaffold by default where content allows
+
+\begin{document}
+\begin{frame}[t]
+\WorksheetTitle{GEMA (formerly BEDMAS) --- Answers}{2}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{1}{17}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{2}{14}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{3}{36}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{4}{24}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{5}{2}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{6}{9}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{7}{17}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{8}{29}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{9}{6}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{GEMA (formerly BEDMAS) --- Answers}{2}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{10}{50}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{11}{5}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{12}{13}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{13}{22}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{14}{13}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{15}{9}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{16}{14}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{17}{10}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{18}{16}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{GEMA (formerly BEDMAS) --- Answers}{2}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{19}{9}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{20}{15}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{21}{19}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{22}{16}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{23}{6}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{24}{1}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{25}{12}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{26}{8}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{27}{19}\end{column}
+\end{columns}
+\end{frame}
+\end{document}
