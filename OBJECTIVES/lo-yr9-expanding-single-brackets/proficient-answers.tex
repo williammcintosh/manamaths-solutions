@@ -1,0 +1,109 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmanswerColor}{HTML}{306A3A}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\newtcolorbox{MMCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMAnswer}[2]{\begin{MMCard}\raggedright\small\textbf{#1.} \textcolor{mmanswerColor}{\textbf{#2}}\par\end{MMCard}}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+\begin{document}
+
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks — Answers}{2}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{1}{\(3x+15\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{2}{\(8a+12\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{3}{\(5y+35\)}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{4}{\(8m+10\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{5}{\(6p+12\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{6}{\(9b+12\)}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{7}{\(7c-14\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{8}{\(8d-20\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{9}{\(5x-30\)}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks — Answers}{2}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{10}{\(10y-6\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{11}{\(-3a-12\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{12}{\(-2m+10\)}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{13}{\(-8n-12\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{14}{\(-5p+10\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{15}{\(-12q-3\)}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{16}{\(12\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{17}{\(-12\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{18}{\(15\)}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks — Answers}{2}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{19}{\(-3b\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{20}{\(10\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{21}{False}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{22}{True}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{23}{False}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{24}{True}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{25}{False}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{26}{\(4x+2\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{27}{Multiply every term inside by the outside term}\end{column}
+\end{columns}
+\end{frame}
+\end{document}
