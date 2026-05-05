@@ -1,0 +1,73 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmanswerColor}{HTML}{306A3A}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\newtcolorbox{MMCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMAnswer}[2]{\begin{MMCard}\raggedright\small\textbf{#1.} \textcolor{mmanswerColor}{\textbf{#2}}\par\end{MMCard}}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+\begin{document}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks — Answers}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{1}{\(3x(2x+3)\)}\MMAnswer{2}{\(4a(2a+3)\)}\MMAnswer{3}{\(5y(2y-3)\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{4}{\(6m(2m+3)\)}\MMAnswer{5}{\(5p(3p-4)\)}\MMAnswer{6}{\(7b(2b+3)\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{7}{\(2(2x^2+3x-1)\)}\MMAnswer{8}{\(3(2a^2-3a+1)\)}\MMAnswer{9}{\(4(2y^2+3y-1)\)}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks — Answers}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{10}{\(3m(3m-4)\)}\MMAnswer{11}{\(8p(2p+3)\)}\MMAnswer{12}{\(5q(4q-5)\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{13}{\(2xy(x+2)\)}\MMAnswer{14}{\(3ab(a-2)\)}\MMAnswer{15}{\(5mn(m+2)\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{16}{\(4pq(p-2)\)}\MMAnswer{17}{\(2x+6\)}\MMAnswer{18}{\(3\)}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks — Answers}{3}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{19}{\(x\)}\MMAnswer{20}{\(2\)}\MMAnswer{21}{\(3\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{22}{\(4\)}\MMAnswer{23}{True}\MMAnswer{24}{False (\(4(a-2)\))}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{25}{True}\MMAnswer{26}{False (\(2(x-2)\))}\MMAnswer{27}{\(3(2x+3)\) or \((3)(2x+3)\)}\end{column}
+\end{columns}
+\end{frame}
+\end{document}
