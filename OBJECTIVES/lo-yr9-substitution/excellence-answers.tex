@@ -30,7 +30,8 @@
     \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
   \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
 }
-\newcommand{\MMAnswer}[2]{\begin{MMCard}\raggedright\small\textbf{#1.} \textcolor{mmanswerColor}{\textbf{#2}}\par\end{MMCard}}
+% Three-arg answer: number, original question (black), worked answer (green)
+\newcommand{\MMAnswerTwo}[3]{\begin{MMCard}\raggedright\small\textbf{#1.} \textcolor{mmtext}{#2}\par\vspace{0.1em}\textcolor{mmanswerColor}{\textbf{#3}}\par\end{MMCard}}
 \setbeamertemplate{background}{
  \begin{tikzpicture}[remember picture,overlay]
  \draw[black,line width=1.5pt,rounded corners=10pt]
@@ -45,9 +46,9 @@
 \WorksheetTitle{Push Tasks — Answers}{3}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMAnswer{1}{\(2x+5\) with \(x=3\): \(2\times3+5=11\)}\MMAnswer{2}{\(x^2-4\) with \(x=3\): \(3^2-4=5\)}\MMAnswer{3}{\(3x^2\) with \(x=3\): \(3\times3^2=27\)}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{4}{\((x+2)^2\) with \(x=3\): \((3+2)^2=25\)}\MMAnswer{5}{\(2a+3\) with \(a=4\): \(2\times4+3=11\)}\MMAnswer{6}{\(a^2-1\) with \(a=4\): \(4^2-1=15\)}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{7}{\(3a^2\) with \(a=4\): \(3\times4^2=48\)}\MMAnswer{8}{\(3m+2\) with \(m=-1\): \(3(-1)+2=-1\)}\MMAnswer{9}{\(m^2\) with \(m=-1\): \((-1)^2=1\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{1}{$2x+5$, $x=3$}{\(2\times3+5=11\)}\MMAnswerTwo{2}{$x^2-4$, $x=3$}{\(3^2-4=5\)}\MMAnswerTwo{3}{$3x^2$, $x=3$}{\(3\times3^2=27\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{4}{$(x+2)^2$, $x=3$}{\((3+2)^2=25\)}\MMAnswerTwo{5}{$2a+3$, $a=4$}{\(2\times4+3=11\)}\MMAnswerTwo{6}{$a^2-1$, $a=4$}{\(4^2-1=15\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{7}{$3a^2$, $a=4$}{\(3\times4^2=48\)}\MMAnswerTwo{8}{$3m+2$, $m=-1$}{\(3(-1)+2=-1\)}\MMAnswerTwo{9}{$m^2$, $m=-1$}{\((-1)^2=1\)}\end{column}
 \end{columns}
 \end{frame}
 
@@ -55,9 +56,9 @@
 \WorksheetTitle{Push Tasks — Answers}{3}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMAnswer{10}{\(4p-3\) with \(p=2\): \(4\times2-3=5\)}\MMAnswer{11}{\(2p^2\) with \(p=2\): \(2\times2^2=8\)}\MMAnswer{12}{\(5u-2\) with \(u=1.5\): \(5\times1.5-2=5.5\)}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{13}{\(u^2+1\) with \(u=1.5\): \(1.5^2+1=3.25\)}\MMAnswer{14}{Rectangle length \(x+2\), width \(3\), \(x=4\): \((4+2)\times3=18\)}\MMAnswer{15}{Square side \(a+1\), \(a=3\), area: \((3+1)^2=16\)}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{16}{Taxi fare \(3n+4\), \(n=5\): \(3\times5+4=19\) dollars}\MMAnswer{17}{Rule \(2t^2-1\), \(t=3\): \(2\times3^2-1=17\)}\MMAnswer{18}{Rule \(5-h^2\), \(h=2\): \(5-2^2=1\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{10}{$4p-3$, $p=2$}{\(4\times2-3=5\)}\MMAnswerTwo{11}{$2p^2$, $p=2$}{\(2\times2^2=8\)}\MMAnswerTwo{12}{$5u-2$, $u=1.5$}{\(5\times1.5-2=5.5\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{13}{$u^2+1$, $u=1.5$}{\(1.5^2+1=3.25\)}\MMAnswerTwo{14}{Rectangle $x+2$ by $3$, $x=4$}{\((4+2)\times3=18\)}\MMAnswerTwo{15}{Square $(a+1)^2$, $a=3$}{\((3+1)^2=16\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{16}{Taxi $3n+4$, $n=5$}{\(3\times5+4=19\) dollars}\MMAnswerTwo{17}{Rule $2t^2-1$, $t=3$}{\(2\times3^2-1=17\)}\MMAnswerTwo{18}{Rule $5-h^2$, $h=2$}{\(5-2^2=1\)}\end{column}
 \end{columns}
 \end{frame}
 
@@ -65,9 +66,9 @@
 \WorksheetTitle{Push Tasks — Answers}{3}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMAnswer{19}{\(x=4\), expr \(3x-2\): \(3\times4-2=10\)}\MMAnswer{20}{\(x=4\), expr \(x^2+1\): \(4^2+1=17\)}\MMAnswer{21}{\(y=-1\), expr \(2y+5\): \(2(-1)+5=3\)}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{22}{\(a=2\), expr \(a^2-3a\): \(2^2-3\times2=-2\)}\MMAnswer{23}{\(a=2\), expr \(4a+1\): \(4\times2+1=9\)}\MMAnswer{24}{\(r=10\), expr \(r^2\div5\): \(10^2\div5=20\)}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{25}{\(c=20\), expr \(c\div4-3\): \(20\div4-3=2\)}\MMAnswer{26}{Triangle area \(\frac12bh\), \(b=8,h=5\): \(\frac12\times8\times5=20\)}\MMAnswer{27}{Check \(x=2\) in \(3x+1=7\): \(3\times2+1=7\) \checkmark}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{19}{$3x-2$, $x=4$}{\(3\times4-2=10\)}\MMAnswerTwo{20}{$x^2+1$, $x=4$}{\(4^2+1=17\)}\MMAnswerTwo{21}{$2y+5$, $y=-1$}{\(2(-1)+5=3\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{22}{$a^2-3a$, $a=2$}{\(2^2-3\times2=-2\)}\MMAnswerTwo{23}{$4a+1$, $a=2$}{\(4\times2+1=9\)}\MMAnswerTwo{24}{$r^2\div5$, $r=10$}{\(10^2\div5=20\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{25}{$c\div4-3$, $c=20$}{\(20\div4-3=2\)}\MMAnswerTwo{26}{Triangle $\frac12bh$, $b=8,h=5$}{\(\frac12\times8\times5=20\)}\MMAnswerTwo{27}{$3x+1=7$, $x=2$}{\(3\times2+1=7\) \checkmark}\end{column}
 \end{columns}
 \end{frame}
 \end{document}
