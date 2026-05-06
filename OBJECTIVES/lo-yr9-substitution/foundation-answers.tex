@@ -1,19 +1,17 @@
 \documentclass[aspectratio=169,12pt]{beamer}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{xcolor}
 \usepackage[most]{tcolorbox}
 \usepackage{tikz}
 \usepackage{graphicx}
-\usepackage{xcolor}
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
 \everymath{\displaystyle}
-
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 \setbeamertemplate{headline}{}
-
 \definecolor{mmpageWhite}{HTML}{FCFBF7}
 \definecolor{mmtanSoft}{HTML}{F7F5EF}
 \definecolor{mmgreenDeep}{HTML}{244B2C}
@@ -21,21 +19,18 @@
 \definecolor{mmgreenSoft}{HTML}{E4EFD9}
 \definecolor{mmtext}{HTML}{163221}
 \definecolor{mmanswerColor}{HTML}{306A3A}
-
 \setbeamercolor{background canvas}{bg=mmpageWhite}
 \setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
-
-\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
-\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/header-logo.png}}}
-\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{../../SITE/hoe.png}}}
-\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\KoruIcon\or \KoruIcon\hspace{0.22em}\KoruIcon\hspace{0.22em}\KoruIcon\fi}
+\newtcolorbox{MMCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
 \newcommand{\WorksheetTitle}[2]{%
   {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
     \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
   \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
 }
-\newcommand{\MMAnswer}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} \textcolor{mmanswerColor}{\textbf{#2}}\par\end{MMProblemCard}}
-
+\newcommand{\MMAnswer}[2]{\begin{MMCard}\raggedright\small\textbf{#1.} \textcolor{mmanswerColor}{\textbf{#2}}\par\end{MMCard}}
 \setbeamertemplate{background}{
  \begin{tikzpicture}[remember picture,overlay]
  \draw[black,line width=1.5pt,rounded corners=10pt]
@@ -44,77 +39,35 @@
  ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
  \end{tikzpicture}
 }
-
-% Default worksheet generation rules:
-% use notes-style beamer pages
-% use bordered cards for individual problems
-% target 9 problems per frame in a 3x3 grid
-% target 3 frames per scaffold by default where content allows
-
 \begin{document}
+
 \begin{frame}[t]
-\WorksheetTitle{Substitution --- Answers}{1}
+\WorksheetTitle{Start Tasks — Answers}{1}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMAnswer{1}{7}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{2}{3}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{3}{8}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMAnswer{4}{13}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{5}{6}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{6}{3}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMAnswer{7}{10}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{8}{11}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{9}{16}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{1}{\(x+4\) with \(x=3\): \(3+4=7\)}\MMAnswer{2}{\(x-2\) with \(x=5\): \(5-2=3\)}\MMAnswer{3}{\(2x\) with \(x=4\): \(2\times4=8\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{4}{\(x+7\) with \(x=6\): \(6+7=13\)}\MMAnswer{5}{\(3y\) with \(y=2\): \(3\times2=6\)}\MMAnswer{6}{\(a-5\) with \(a=8\): \(8-5=3\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{7}{\(m+9\) with \(m=1\): \(1+9=10\)}\MMAnswer{8}{\(2p+1\) with \(p=5\): \(2\times5+1=11\)}\MMAnswer{9}{\(t^2\) with \(t=4\): \(4^2=16\)}\end{column}
 \end{columns}
 \end{frame}
 
 \begin{frame}[t]
-\WorksheetTitle{Substitution --- Answers}{1}
+\WorksheetTitle{Start Tasks — Answers}{1}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMAnswer{10}{7}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{11}{3}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{12}{9}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMAnswer{13}{11}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{14}{13}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{15}{3}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMAnswer{16}{10}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{17}{3}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{18}{7}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{10}{\(p+q\) with \(p=5,q=2\): \(5+2=7\)}\MMAnswer{11}{\(p-q\) with \(p=5,q=2\): \(5-2=3\)}\MMAnswer{12}{\(p+2q\) with \(p=5,q=2\): \(5+2\times2=9\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{13}{\(4a-1\) with \(a=3\): \(4\times3-1=11\)}\MMAnswer{14}{\(b+6\) with \(b=7\): \(7+6=13\)}\MMAnswer{15}{\(n\div3\) with \(n=9\): \(9\div3=3\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{16}{\(3k-2\) with \(k=4\): \(3\times4-2=10\)}\MMAnswer{17}{\(r-7\) with \(r=10\): \(10-7=3\)}\MMAnswer{18}{\(c^2+3\) with \(c=2\): \(2^2+3=7\)}\end{column}
 \end{columns}
 \end{frame}
 
 \begin{frame}[t]
-\WorksheetTitle{Substitution --- Answers}{1}
+\WorksheetTitle{Start Tasks — Answers}{1}
 \vspace{-0.18em}
 \begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMAnswer{19}{Yes}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{20}{Yes}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{21}{No}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMAnswer{22}{5}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{23}{13}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{24}{3}\end{column}
-\end{columns}
-\vspace{0.45em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.32\textwidth}\MMAnswer{25}{50}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{26}{4}\end{column}
-\begin{column}{0.32\textwidth}\MMAnswer{27}{21}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{19}{\(x+2=5\) with \(x=3\): \(3+2=5\) \checkmark}\MMAnswer{20}{\(2y=8\) with \(y=4\): \(2\times4=8\) \checkmark}\MMAnswer{21}{\(m+6=10\) with \(m=1\): \(1+6=7\neq10\) \texttimes}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{22}{\(x+3\) with \(x=2\): \(2+3=5\)}\MMAnswer{23}{\(2x+5\) with \(x=4\): \(2\times4+5=13\)}\MMAnswer{24}{\(q-p\) with \(p=3,q=6\): \(6-3=3\)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{25}{\(2a^2\) with \(a=5\): \(2\times5^2=50\)}\MMAnswer{26}{\(d\div4+1\) with \(d=12\): \(12\div4+1=4\)}\MMAnswer{27}{\(x+2x\) with \(x=7\): \(7+2\times7=21\)}\end{column}
 \end{columns}
 \end{frame}
 \end{document}
