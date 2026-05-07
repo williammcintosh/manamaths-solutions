@@ -2,7 +2,7 @@
 
 ## Layout
 
-- `OBJECTIVES/lo-yr9-<slug>/` — one folder per LO, mirroring `manamaths`
+- `OBJECTIVES/lo-<slug>/` — one folder per LO, mirroring `manamaths`
 - `OPERATIONS/templates/` — shared LaTeX template for answer PDFs
 - `OPERATIONS/scripts/` — build helpers
 - `OPERATIONS/data/` — tracker (if we want one later)
