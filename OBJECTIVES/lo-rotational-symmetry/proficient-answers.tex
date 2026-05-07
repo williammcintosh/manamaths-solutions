@@ -21,7 +21,7 @@
 \definecolor{mmanswerColor}{HTML}{306A3A}
 \setbeamercolor{background canvas}{bg=mmpageWhite}
 \setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
-\newtcolorbox{MMCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=4pt,right=4pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.43\textheight,valign=center,#1}
+\newtcolorbox{MMCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=4pt,right=4pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.40\textheight,valign=center,#1}
 \newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/header-logo.png}}}
 \newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/hoe.png}}}
 \newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
@@ -30,7 +30,7 @@
     \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
   \par\vspace{0.12em}{\color{mmgreenLeaf}\rule{\linewidth}{2.5pt}}\par\vspace{0.06em}}
 }
-\newcommand{\BigSym}[1]{\begin{center}\scalebox{1.0}{#1}\end{center}}
+\newcommand{\BigSym}[1]{\begin{center}\scalebox{0.88}{#1}\end{center}}
 \newcommand{\SymQ}[2]{\begin{MMCard}\centering\vfill\BigSym{#1}\vspace{0.1em}{\raggedright\small\textbf{#2}}\vfill\end{MMCard}}
 \newcommand{\SymAns}[3]{\begin{MMCard}\centering\vfill\BigSym{#1}\vspace{0.08em}{\raggedright\small\textbf{#2}\par\textcolor{mmanswerColor}{\bfseries #3}}\vfill\end{MMCard}}
 \setbeamertemplate{background}{
