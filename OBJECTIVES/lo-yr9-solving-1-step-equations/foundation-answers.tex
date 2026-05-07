@@ -1,0 +1,73 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmanswerColor}{HTML}{306A3A}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\newtcolorbox{MMCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.26\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+}
+\newcommand{\MMAnswerTwo}[3]{\begin{MMCard}\raggedright\small\textbf{#1.} \textcolor{mmtext}{#2}\par\vspace{0.1em}\textcolor{mmanswerColor}{\textbf{#3}}\par\end{MMCard}}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+\begin{document}
+
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks — Answers}{1}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswerTwo{1}{$x+3=7$}{\(x=4\) (subtract 3)}\MMAnswerTwo{2}{$x+5=9$}{\(x=4\) (subtract 5)}\MMAnswerTwo{3}{$x+2=8$}{\(x=6\) (subtract 2)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{4}{$x+4=10$}{\(x=6\) (subtract 4)}\MMAnswerTwo{5}{$x-1=6$}{\(x=7\) (add 1)}\MMAnswerTwo{6}{$x-3=5$}{\(x=8\) (add 3)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{7}{$x-2=4$}{\(x=6\) (add 2)}\MMAnswerTwo{8}{$x+6=11$}{\(x=5\) (subtract 6)}\MMAnswerTwo{9}{$x-4=3$}{\(x=7\) (add 4)}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks — Answers}{1}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswerTwo{10}{$x+7=12$}{\(x=5\) (subtract 7)}\MMAnswerTwo{11}{$x-5=2$}{\(x=7\) (add 5)}\MMAnswerTwo{12}{$x+8=14$}{\(x=6\) (subtract 8)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{13}{$x-6=1$}{\(x=7\) (add 6)}\MMAnswerTwo{14}{$x+9=15$}{\(x=6\) (subtract 9)}\MMAnswerTwo{15}{$x-7=3$}{\(x=10\) (add 7)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{16}{$x+10=17$}{\(x=7\) (subtract 10)}\MMAnswerTwo{17}{$x-8=2$}{\(x=10\) (add 8)}\MMAnswerTwo{18}{$x+11=18$}{\(x=7\) (subtract 11)}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks — Answers}{1}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswerTwo{19}{$x-9=4$}{\(x=13\) (add 9)}\MMAnswerTwo{20}{$x+12=20$}{\(x=8\) (subtract 12)}\MMAnswerTwo{21}{$x-10=5$}{\(x=15\) (add 10)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{22}{$x+13=21$}{\(x=8\) (subtract 13)}\MMAnswerTwo{23}{$x-11=3$}{\(x=14\) (add 11)}\MMAnswerTwo{24}{$x+14=22$}{\(x=8\) (subtract 14)}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswerTwo{25}{$x-12=4$}{\(x=16\) (add 12)}\MMAnswerTwo{26}{$x+15=24$}{\(x=9\) (subtract 15)}\MMAnswerTwo{27}{$x-13=2$}{\(x=15\) (add 13)}\end{column}
+\end{columns}
+\end{frame}
+\end{document}
