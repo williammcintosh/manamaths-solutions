@@ -1,0 +1,147 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmanswerColor}{HTML}{306A3A}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\newtcolorbox{MMCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=4pt,right=4pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.40\textheight,valign=center,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.2em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.12em}{\color{mmgreenLeaf}\rule{\linewidth}{2.5pt}}\par\vspace{0.06em}}
+}
+\newcommand{\BigSym}[1]{\begin{center}\scalebox{0.85}{#1}\end{center}}
+\newcommand{\SymQ}[2]{\begin{MMCard}\centering\vfill\BigSym{#1}\vspace{0.1em}{\raggedright\small\textbf{#2}}\vfill\end{MMCard}}
+\newcommand{\SymAns}[3]{\begin{MMCard}\centering\vfill\BigSym{#1}\vspace{0.08em}{\raggedright\small\textbf{#2}\par\textcolor{mmanswerColor}{\bfseries #3}}\vfill\end{MMCard}}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+\begin{document}
+
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks - Isometric Drawing}{2}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (0,1)--(0.866,1.5)--(1.732,1);}}{1. Draw cube show all edges.}{All 9 visible edges drawn}
+\SymAns{\tikz{\draw[thick] (0,0)--(1.732,1)--(1.732,2.5)--(0,1.5)--cycle; \draw[thick] (1.732,1)--(2.598,0.5)--(2.598,2)--(1.732,2.5); \draw[thick] (0,0)--(0.866,-0.5)--(2.598,0.5)--(1.732,1); \draw[thick] (0,1.5)--(0.866,1)--(2.598,2)--(1.732,2.5);}}{2. Draw 2x1x2 cuboid.}{Check: length=2, width=1, height=2 units}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1)--(0,0.5)--cycle; \draw[thick] (0.866,0.5)--(1.732,1)--(1.732,1.5)--(0.866,1); \draw[thick] (0,0)--(0.866,0)--(1.732,0.5)--(0.866,0.5); \draw[thick] (0,0.5)--(0.866,1)--(1.732,1.5);}}{3. Draw 6-cube steps.}{Check: bottom 3, middle 2, top 1}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2.5)--(0,2)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,2)--(0.866,2.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick,dashed] (1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick,dashed] (0.866,1.5)--(0.866,2.5);}}{4. Cubes in tower? hidden?}{3 visible, 0 hidden = 3 total}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1.5)--(0.866,2)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (1.732,0)--(1.732,0.5)--(0.866,1); \draw[thick] (0,1)--(0.866,1.5)--(0.866,2);}}{5. Cubes in L? hidden?}{5 total: 4 visible, 1 hidden}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (0,1)--(0.866,1.5)--(1.732,1); \draw[thick] (0.866,0.5)--(1.732,1); \draw[thick,fill=gray!20] (0.866,0)--(1.732,0)--(1.732,0.5)--(0.866,0.5);}}{6. Draw 4 cubes L-arrangement.}{Check: 2x2 base + 1 above}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks - Isometric Drawing}{2}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2)--(0,1.5)--cycle; \draw[thick] (0.866,0.5)--(2.598,1.5)--(2.598,3)--(0.866,2); \draw[thick] (0,0)--(0.866,0)--(2.598,1)--(1.732,1.5)--(0.866,0.5); \draw[thick] (0,1.5)--(0.866,2)--(2.598,3); \draw[thick,dashed] (0.866,0)--(1.732,0.5)--(2.598,1.5);}}{7. Cubes in composite?}{5 cubes (count hidden)}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2)--(0,1.5)--cycle; \draw[thick] (0.866,0.5)--(2.598,1.5)--(2.598,3)--(0.866,2); \draw[thick] (0,0)--(0.866,0)--(2.598,1)--(1.732,1.5)--(0.866,0.5); \draw[thick] (0,1.5)--(0.866,2)--(2.598,3); \draw[thick,dashed] (0.866,0)--(1.732,0.5)--(2.598,1.5);}}{8. Draw from different angle.}{Rotate view 60° mentally}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\foreach \x in {0,...,4} \foreach \y in {0,...,3} \fill (\x*0.433,\y*0.25) circle (0.03);}}{9. Draw 2x2x2 cube.}{8 cubes total}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(1.732,0)--(0.866,-0.5)--cycle; \draw[thick] (0.866,1.5)--(0,0)--(0.866,0.5); \draw[thick] (0.866,1.5)--(0.866,-0.5); \draw[dashed] (0.866,1.5)--(1.732,0); \draw[thick] (0,0)--(0.866,-0.5);}}{10. Edges on square pyramid?}{8 edges}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (0,1)--(0.866,1.5)--(1.732,1); \draw[thick,fill=gray!30] (0,0)--(0.866,0.5)--(1.732,0)--(0.866,-0.5)--cycle;}}{11. Draw right triangle prism.}{Check: triangle base correct}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[dashed] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[dashed] (0.866,0)--(1.732,0); \draw[dashed] (0.866,1)--(1.732,1); \draw[thick] (0,0)--(0.866,0)--(0.866,1)--(0,1);}}{12. Draw 3 unit high. Hidden edges.}{Check: dashed back edges}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks - Isometric Drawing}{2}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(1.732,1)--(1.732,2.5)--(0,1.5)--cycle; \draw[thick] (1.732,1)--(2.598,0.5)--(2.598,2)--(1.732,2.5); \draw[thick] (0,0)--(0.866,-0.5)--(2.598,0.5)--(1.732,1); \draw[thick] (0,1.5)--(0.866,1)--(2.598,2)--(1.732,2.5);}}{13. Draw 3x2x1 cuboid. Count?}{6 cubes}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1)--(0,0.5)--cycle; \draw[thick] (0.866,0.5)--(1.732,1)--(1.732,1.5)--(0.866,1); \draw[thick] (0,0)--(0.866,0)--(1.732,0.5)--(0.866,0.5); \draw[thick] (0,0.5)--(0.866,1)--(1.732,1.5);}}{14. Draw steps height 3.}{Check: 3 levels}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2.5)--(0,2)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,2)--(0.866,2.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick,dashed] (1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick,dashed] (0.866,1.5)--(0.866,2.5);}}{15. Draw 2 wide 3 high.}{6 cubes total}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1.5)--(0.866,2)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (1.732,0)--(1.732,0.5)--(0.866,1); \draw[thick] (0,1)--(0.866,1.5)--(0.866,2);}}{16. Draw 2 wide each way.}{7 cubes}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (0,1)--(0.866,1.5)--(1.732,1); \draw[thick] (0.866,0.5)--(1.732,1); \draw[thick,fill=gray!20] (0.866,0)--(1.732,0)--(1.732,0.5)--(0.866,0.5);}}{17. Stack 2 + 1 beside.}{3 cubes}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2)--(0,1.5)--cycle; \draw[thick] (0.866,0.5)--(2.598,1.5)--(2.598,3)--(0.866,2); \draw[thick] (0,0)--(0.866,0)--(2.598,1)--(1.732,1.5)--(0.866,0.5); \draw[thick] (0,1.5)--(0.866,2)--(2.598,3); \draw[thick,dashed] (0.866,0)--(1.732,0.5)--(2.598,1.5);}}{18. Draw composite 5 cubes.}{Check: all 5 drawn}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks - Isometric Drawing}{2}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\foreach \x in {0,...,4} \foreach \y in {0,...,3} \fill (\x*0.433,\y*0.25) circle (0.03);}}{19. Label isometric axes.}{Vertical, 30° right, 30° left}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(1.732,0)--(0.866,-0.5)--cycle; \draw[thick] (0.866,1.5)--(0,0)--(0.866,0.5); \draw[thick] (0.866,1.5)--(0.866,-0.5); \draw[dashed] (0.866,1.5)--(1.732,0); \draw[thick] (0,0)--(0.866,-0.5);}}{20. Vertices on pyramid?}{5 vertices}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (0,1)--(0.866,1.5)--(1.732,1); \draw[thick,fill=gray!30] (0,0)--(0.866,0.5)--(1.732,0)--(0.866,-0.5)--cycle;}}{21. Draw prism 3 cubes long.}{Check: 3 cube units long}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (0,1)--(0.866,1.5)--(1.732,1);}}{22. Volume 8 cube.}{2x2x2, draw it}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(1.732,1)--(1.732,2.5)--(0,1.5)--cycle; \draw[thick] (1.732,1)--(2.598,0.5)--(2.598,2)--(1.732,2.5); \draw[thick] (0,0)--(0.866,-0.5)--(2.598,0.5)--(1.732,1); \draw[thick] (0,1.5)--(0.866,1)--(2.598,2)--(1.732,2.5);}}{23. 3x2x2 cuboid.}{12 cubes total}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2)--(0,1.5)--cycle; \draw[thick] (0.866,0.5)--(2.598,1.5)--(2.598,3)--(0.866,2); \draw[thick] (0,0)--(0.866,0)--(2.598,1)--(1.732,1.5)--(0.866,0.5); \draw[thick] (0,1.5)--(0.866,2)--(2.598,3); \draw[thick,dashed] (0.866,0)--(1.732,0.5)--(2.598,1.5);}}{24. Draw + count cubes.}{Check: count all cubes}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks - Isometric Drawing}{2}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1)--(0,0.5)--cycle; \draw[thick] (0.866,0.5)--(1.732,1)--(1.732,1.5)--(0.866,1); \draw[thick] (0,0)--(0.866,0)--(1.732,0.5)--(0.866,0.5); \draw[thick] (0,0.5)--(0.866,1)--(1.732,1.5);}}{25. Draw 10 cube steps.}{Check: 4+3+2+1=10}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2.5)--(0,2)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,2)--(0.866,2.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick,dashed] (1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick,dashed] (0.866,1.5)--(0.866,2.5);}}{26. 6 visible, total?}{6 visible + maybe 0-2 hidden}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (0,1)--(0.866,1.5)--(1.732,1); \draw[thick] (0.866,0.5)--(1.732,1); \draw[thick,fill=gray!20] (0.866,0)--(1.732,0)--(1.732,0.5)--(0.866,0.5);}}{27. Draw 2x2x2 shaded.}{8 cubes, shade right faces}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\end{column}
+\end{columns}
+\end{frame}
+\end{document}

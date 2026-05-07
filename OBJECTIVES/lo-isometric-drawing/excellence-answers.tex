@@ -1,0 +1,147 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmgreenSoft}{HTML}{E4EFD9}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmanswerColor}{HTML}{306A3A}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\newtcolorbox{MMCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.5pt,arc=8pt,left=4pt,right=4pt,top=4pt,bottom=4pt,before skip=0pt,after skip=0pt,height=0.40\textheight,valign=center,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%
+  {\colorbox{mmtanSoft}{\parbox[c][2.2em][c]{0.975\linewidth}{%
+    \hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.12em}{\color{mmgreenLeaf}\rule{\linewidth}{2.5pt}}\par\vspace{0.06em}}
+}
+\newcommand{\BigSym}[1]{\begin{center}\scalebox{0.85}{#1}\end{center}}
+\newcommand{\SymQ}[2]{\begin{MMCard}\centering\vfill\BigSym{#1}\vspace{0.1em}{\raggedright\small\textbf{#2}}\vfill\end{MMCard}}
+\newcommand{\SymAns}[3]{\begin{MMCard}\centering\vfill\BigSym{#1}\vspace{0.08em}{\raggedright\small\textbf{#2}\par\textcolor{mmanswerColor}{\bfseries #3}}\vfill\end{MMCard}}
+\setbeamertemplate{background}{
+ \begin{tikzpicture}[remember picture,overlay]
+ \draw[black,line width=1.5pt,rounded corners=10pt]
+ ([xshift=0.45cm,yshift=-0.45cm]current page.north west)
+ rectangle
+ ([xshift=-0.45cm,yshift=0.45cm]current page.south east);
+ \end{tikzpicture}
+}
+\begin{document}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks - Isometric Drawing}{3}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2)--(0,1.5)--cycle; \draw[thick] (0.866,0.5)--(2.598,1.5)--(2.598,3)--(0.866,2); \draw[thick] (0,0)--(0.866,0)--(2.598,1)--(1.732,1.5)--(0.866,0.5); \draw[thick] (0,1.5)--(0.866,2)--(2.598,3); \draw[thick,dashed] (0.866,0)--(1.732,0.5)--(2.598,1.5);}}{1. Count all cubes.}{Count: visible + hidden = total}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2)--(0,1.5)--cycle; \draw[thick] (0.866,0.5)--(2.598,1.5)--(2.598,3)--(0.866,2); \draw[thick] (0,0)--(0.866,0)--(2.598,1)--(1.732,1.5)--(0.866,0.5); \draw[thick] (0,1.5)--(0.866,2)--(2.598,3); \draw[thick,dashed] (0.866,0)--(1.732,0.5)--(2.598,1.5);}}{2. Draw from left view.}{Rotate isometric 60° left}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2)--(0,1.5)--cycle; \draw[thick] (0.866,0.5)--(2.598,1.5)--(2.598,3)--(0.866,2); \draw[thick] (0,0)--(0.866,0)--(2.598,1)--(1.732,1.5)--(0.866,0.5); \draw[thick] (0,1.5)--(0.866,2)--(2.598,3); \draw[thick,dashed] (0.866,0)--(1.732,0.5)--(2.598,1.5);}}{3. Draw from top view.}{Top = plan view in 2D}
+\SymAns{\tikz{\foreach \x in {0,...,4} \foreach \y in {0,...,3} \fill (\x*0.433,\y*0.25) circle (0.03);}}{4. Draw 3x2x1 cuboid.}{6 cubes, check proportions}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1)--(0,0.5)--cycle; \draw[thick] (0.866,0.5)--(1.732,1)--(1.732,1.5)--(0.866,1); \draw[thick] (0,0)--(0.866,0)--(1.732,0.5)--(0.866,0.5); \draw[thick] (0,0.5)--(0.866,1)--(1.732,1.5);}}{5. 3 high 3 wide steps.}{6 cubes, step pattern}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2.5)--(0,2)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,2)--(0.866,2.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick,dashed] (1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick,dashed] (0.866,1.5)--(0.866,2.5);}}{6. 8 total, 2 hidden.}{6 visible, draw it}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks - Isometric Drawing}{3}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1.5)--(0.866,2)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (1.732,0)--(1.732,0.5)--(0.866,1); \draw[thick] (0,1)--(0.866,1.5)--(0.866,2);}}{7. Draw 7 cube L.}{Check: 7 total}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1.5)--(0.866,2)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (1.732,0)--(1.732,0.5)--(0.866,1); \draw[thick] (0,1)--(0.866,1.5)--(0.866,2);}}{8. Draw L from different angle.}{Rotate view}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (0,1)--(0.866,1.5)--(1.732,1); \draw[thick] (0.866,0.5)--(1.732,1); \draw[thick,fill=gray!20] (0.866,0)--(1.732,0)--(1.732,0.5)--(0.866,0.5);}}{9. 6 cubes in 2x3.}{6 cubes, check 2x3 base}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (0,1)--(0.866,1.5)--(1.732,1); \draw[thick] (0.866,0.5)--(1.732,1); \draw[thick,fill=gray!20] (0.866,0)--(1.732,0)--(1.732,0.5)--(0.866,0.5);}}{10. 2x3 from above.}{Plan view = rectangle 2x3}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2)--(0,1.5)--cycle; \draw[thick] (0.866,0.5)--(2.598,1.5)--(2.598,3)--(0.866,2); \draw[thick] (0,0)--(0.866,0)--(2.598,1)--(1.732,1.5)--(0.866,0.5); \draw[thick] (0,1.5)--(0.866,2)--(2.598,3); \draw[thick,dashed] (0.866,0)--(1.732,0.5)--(2.598,1.5);}}{11. Two 7-cube possibilities.}{e.g. 3x2x1 + 1 OR 2x2x2 - 1}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2)--(0,1.5)--cycle; \draw[thick] (0.866,0.5)--(2.598,1.5)--(2.598,3)--(0.866,2); \draw[thick] (0,0)--(0.866,0)--(2.598,1)--(1.732,1.5)--(0.866,0.5); \draw[thick] (0,1.5)--(0.866,2)--(2.598,3); \draw[thick,dashed] (0.866,0)--(1.732,0.5)--(2.598,1.5);}}{12. Tunnel shape.}{e.g. 3x3x1 with missing center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks - Isometric Drawing}{3}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\foreach \x in {0,...,4} \foreach \y in {0,...,3} \fill (\x*0.433,\y*0.25) circle (0.03);}}{13. Design own composite.}{Any unique shape with cubes counted}
+\SymAns{\tikz{\foreach \x in {0,...,4} \foreach \y in {0,...,3} \fill (\x*0.433,\y*0.25) circle (0.03);}}{14. Draw floating cube.}{Add shadow underneath}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(1.732,0)--(0.866,-0.5)--cycle; \draw[thick] (0.866,1.5)--(0,0)--(0.866,0.5); \draw[thick] (0.866,1.5)--(0.866,-0.5); \draw[dashed] (0.866,1.5)--(1.732,0); \draw[thick] (0,0)--(0.866,-0.5);}}{15. Add dimensions.}{Label base and height}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (0,1)--(0.866,1.5)--(1.732,1); \draw[thick,fill=gray!30] (0,0)--(0.866,0.5)--(1.732,0)--(0.866,-0.5)--cycle;}}{16. Add dimensions.}{Label base width, depth, height}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2)--(0,1.5)--cycle; \draw[thick] (0.866,0.5)--(2.598,1.5)--(2.598,3)--(0.866,2); \draw[thick] (0,0)--(0.866,0)--(2.598,1)--(1.732,1.5)--(0.866,0.5); \draw[thick] (0,1.5)--(0.866,2)--(2.598,3); \draw[thick,dashed] (0.866,0)--(1.732,0.5)--(2.598,1.5);}}{17. Minimum cubes?}{Sometimes fewer than visible suggests}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2)--(0,1.5)--cycle; \draw[thick] (0.866,0.5)--(2.598,1.5)--(2.598,3)--(0.866,2); \draw[thick] (0,0)--(0.866,0)--(2.598,1)--(1.732,1.5)--(0.866,0.5); \draw[thick] (0,1.5)--(0.866,2)--(2.598,3); \draw[thick,dashed] (0.866,0)--(1.732,0.5)--(2.598,1.5);}}{18. 9 total, which hidden?}{The one at back-bottom if visible suggests 8}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks - Isometric Drawing}{3}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1)--(0,0.5)--cycle; \draw[thick] (0.866,0.5)--(1.732,1)--(1.732,1.5)--(0.866,1); \draw[thick] (0,0)--(0.866,0)--(1.732,0.5)--(0.866,0.5); \draw[thick] (0,0.5)--(0.866,1)--(1.732,1.5);}}{19. Draw from elevation.}{e.g. front=3, side=2 — draw isometric}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2.5)--(0,2)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,2)--(0.866,2.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick,dashed] (1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick,dashed] (0.866,1.5)--(0.866,2.5);}}{20. Front=3, side=2 draw.}{Check: matches both elevations}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (0,1)--(0.866,1.5)--(1.732,1); \draw[thick] (0.866,0.5)--(1.732,1); \draw[thick,fill=gray!20] (0.866,0)--(1.732,0)--(1.732,0.5)--(0.866,0.5);}}{21. Plan, front, side views.}{Draw 3 orthographic projections}
+\SymAns{\tikz{\foreach \x in {0,...,4} \foreach \y in {0,...,3} \fill (\x*0.433,\y*0.25) circle (0.03);}}{22. 3 different with 4 cubes.}{Check: each uses exactly 4 cubes}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\foreach \x in {0,...,4} \foreach \y in {0,...,3} \fill (\x*0.433,\y*0.25) circle (0.03);}}{23. Explain isometric rules.}{30°, vertical stays, parallel lines}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2)--(0,1.5)--cycle; \draw[thick] (0.866,0.5)--(2.598,1.5)--(2.598,3)--(0.866,2); \draw[thick] (0,0)--(0.866,0)--(2.598,1)--(1.732,1.5)--(0.866,0.5); \draw[thick] (0,1.5)--(0.866,2)--(2.598,3); \draw[thick,dashed] (0.866,0)--(1.732,0.5)--(2.598,1.5);}}{24. Draw 3x3x3.}{27 cubes, check corners}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks - Isometric Drawing}{3}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,2.5)--(0,2)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,2)--(0.866,2.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick,dashed] (1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick,dashed] (0.866,1.5)--(0.866,2.5);}}{25. Hidden > visible?}{Possible if tower is thin and tall}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1.5)--(0.866,2)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (1.732,0)--(1.732,0.5)--(0.866,1); \draw[thick] (0,1)--(0.866,1.5)--(0.866,2);}}{26. Prove 5 cubes.}{Count visible+hidden = 4+1=5}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz{\draw[thick] (0,0)--(0.866,0.5)--(0.866,1.5)--(0,1)--cycle; \draw[thick] (0.866,0.5)--(1.732,0)--(1.732,1)--(0.866,1.5); \draw[thick] (0,0)--(0.866,0)--(1.732,0); \draw[thick] (0,1)--(0.866,1.5)--(1.732,1); \draw[thick] (0.866,0.5)--(1.732,1); \draw[thick,fill=gray!20] (0.866,0)--(1.732,0)--(1.732,0.5)--(0.866,0.5);}}{27. Fool about cube count.}{e.g. draw 3 visible but hide 2 behind}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\end{column}
+\end{columns}
+\end{frame}
+\end{document}
