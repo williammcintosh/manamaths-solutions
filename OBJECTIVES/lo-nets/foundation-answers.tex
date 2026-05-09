@@ -74,11 +74,11 @@
 
 \begin{column}{0.33\textwidth}
 \SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,1) rectangle (1,2);}}{9. Faces when folded?}{5 (open box, no lid)}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(1.5,-0.866)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (-0.5,0.866)--(-1.5,0)--(-0.5,-0.866)--(0.5,-0.866);}}{10. Pyramid faces?}{5 (1 square + 4 triangles)}
+\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{10. Pyramid faces?}{5 (1 square + 4 triangles)}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(1.5,-0.866)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (-0.5,0.866)--(-1.5,0)--(-0.5,-0.866)--(0.5,-0.866);}}{11. Triangles meet at?}{The apex (top vertex)}
+\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{11. Triangles meet at?}{The apex (top vertex)}
 \SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,-0.866+1); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{12. Triangular prism faces?}{5}
 \end{column}
 \end{columns}

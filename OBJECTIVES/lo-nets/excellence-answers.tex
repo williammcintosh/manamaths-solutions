@@ -74,11 +74,11 @@
 
 \begin{column}{0.33\textwidth}
 \SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{9. Different net?}{Swap triangle positions}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(1.5,-0.866)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (-0.5,0.866)--(-1.5,0)--(-0.5,-0.866)--(0.5,-0.866);}}{10. Triangles congruent?}{Yes — same base and slant height}
+\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{10. Triangles congruent?}{Yes — same base and slant height}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(1.5,-0.866)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (-0.5,0.866)--(-1.5,0)--(-0.5,-0.866)--(0.5,-0.866);}}{11. Rectangular pyramid?}{Net: 1 rect + 4 triangles (2 pairs)}
+\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{11. Rectangular pyramid?}{Net: 1 rect + 4 triangles (2 pairs)}
 \SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,-0.866+1); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{12. Right triangle prism?}{Rectangles + 2 right triangles}
 \end{column}
 \end{columns}
