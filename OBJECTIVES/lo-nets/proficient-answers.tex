@@ -8,7 +8,6 @@
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\everymath{\displaystyle}
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 \setbeamertemplate{headline}{}
@@ -43,12 +42,12 @@
 \begin{document}
 
 \begin{frame}[t]
-\WorksheetTitle{Build Tasks - Nets}{2}
+\WorksheetTitle{Build Tasks - Nets and SA}{2}
 \vspace{-0.1em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.33\textwidth}
 \SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{1. Opposite face 3?}{Face 4}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (1,1) rectangle (2,2); \draw[thick] (-1,0) rectangle (0,1);}}{2. Opposite top square?}{The bottom central square}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (1,1) rectangle (2,2); \draw[thick] (-1,0) rectangle (0,1);}}{2. Opposite top square?}{Bottom central square}
 \end{column}
 
 \begin{column}{0.33\textwidth}
@@ -64,7 +63,7 @@
 \end{frame}
 
 \begin{frame}[t]
-\WorksheetTitle{Build Tasks - Nets}{2}
+\WorksheetTitle{Build Tasks - Nets and SA}{2}
 \vspace{-0.1em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.33\textwidth}
@@ -73,8 +72,8 @@
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,-0.866+1); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{9. Volume 2 cm tri + 4 cm?}{$\frac{1}{2}\times2\times1.73\times4=6.92$ cm$^3$}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,-0.866+1); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{10. Surface area?}{$2\times1.73+3\times8=27.46$ cm$^2$}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,0.134); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{9. Volume 2 cm tri + 4 cm?}{6.92 cm$^3$}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,0.134); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{10. Surface area?}{27.46 cm$^2$}
 \end{column}
 
 \begin{column}{0.33\textwidth}
@@ -85,58 +84,58 @@
 \end{frame}
 
 \begin{frame}[t]
-\WorksheetTitle{Build Tasks - Nets}{2}
+\WorksheetTitle{Build Tasks - Nets and SA}{2}
 \vspace{-0.1em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,1) rectangle (1,2);}}{13. Lid positions?}{Depends on arrangement}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-2) rectangle (2,-1); \draw[thick] (-1,-2) rectangle (0,-1);}}{14. Valid cube net?}{Check by folding}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \foreach \x in {0,2} \foreach \y in {0,2} \fill[black] (\x*0.5+0.25,\y*0.5-1.5+0.25) circle (0.07); \fill[black] (0.25,-0.75) circle (0.07);}}{13. 1 up = bottom?}{6}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \foreach \x in {0,2} \foreach \y in {0,2} \fill[black] (\x*0.5+0.25,\y*0.5-1.5+0.25) circle (0.07); \fill[black] (0.25,-0.75) circle (0.07);}}{14. 3 facing = opposite?}{4}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-2) rectangle (2,-1);}}{15. Valid cube net?}{Check by folding}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \foreach \x in {0,2} \foreach \y in {0,2} \fill[black] (\x*0.5+0.25,\y*0.5-1.5+0.25) circle (0.07); \fill[black] (0.25,-0.75) circle (0.07);}}{16. 1 up = bottom?}{6}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{15. Floor area 3x4?}{12 m$^2$}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{16. Floor faces?}{Large rectangle}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \foreach \x in {0,2} \foreach \y in {0,2} \fill[black] (\x*0.5+0.25,\y*0.5-1.5+0.25) circle (0.07); \fill[black] (0.25,-0.75) circle (0.07);}}{17. 3 facing = opposite?}{4}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{18. Floor area 3x4?}{12 m$^2$}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (0.5,-0.866)--(1.5,-0.866)--(1,0);}}{17. Tetrahedron vertices?}{4}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (0.5,-0.866)--(1.5,-0.866)--(1,0);}}{18. Edges per face?}{3}
 \end{column}
 \end{columns}
 \end{frame}
 
 \begin{frame}[t]
-\WorksheetTitle{Build Tasks - Nets}{2}
+\WorksheetTitle{Build Tasks - Nets and SA}{2}
 \vspace{-0.1em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{19. Floor faces?}{Large rectangle (3 x 4)}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (0.5,-0.866)--(1.5,-0.866)--(1,0);}}{20. Tetrahedron vertices?}{4}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{19. Cubes in 5x3x2?}{30}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{20. SA 54, side?}{3 cm}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (0.5,-0.866)--(1.5,-0.866)--(1,0);}}{21. Edges per face?}{3}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (0,1) rectangle (2,2); \draw[thick] (0,2) rectangle (2,3); \draw[thick] (2,0)--(2.5,0.866)--(2.5,1.866)--(2,2.732); \draw[thick] (0,2.732)--(0.5,1.866);}}{22. Rectangular faces?}{6}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{21. 12x5x3 cardboard?}{222 cm$^2$}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{22. Face 25 cm$^2$, total SA?}{150 cm$^2$}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{23. Cubes in 5x3x2?}{30}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (2,1) rectangle (3,2); \draw[thick] (2,2) rectangle (3,3);}}{24. L pentomino valid?}{Check by folding}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{23. 10x4x2 prism SA?}{136 m$^2$}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,1) rectangle (1,2);}}{24. Cube side 3, open SA?}{45 cm$^2$}
 \end{column}
 \end{columns}
 \end{frame}
 
 \begin{frame}[t]
-\WorksheetTitle{Build Tasks - Nets}{2}
+\WorksheetTitle{Build Tasks - Nets and SA}{2}
 \vspace{-0.1em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{25. Craig correct?}{Yes, it folds to a cube}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-2) rectangle (2,-1); \draw[thick] (-1,-2) rectangle (0,-1);}}{26. Non-box pentomino?}{e.g. straight I-pentomino}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-2) rectangle (2,-1); \draw[thick] (-1,-2) rectangle (0,-1);}}{25. Valid cube net?}{Check by folding}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-2) rectangle (2,-1);}}{26. Valid cube net?}{Check by folding}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,-0.866+1); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{27. Vol = 1.73 x 4?}{$\approx$6.92 cm$^3$}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (2,1) rectangle (3,2); \draw[thick] (2,2) rectangle (3,3);}}{27. Open box from L?}{Check by folding}
 \end{column}
 
 \begin{column}{0.33\textwidth}

@@ -8,7 +8,6 @@
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\everymath{\displaystyle}
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 \setbeamertemplate{headline}{}
@@ -48,38 +47,17 @@
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.33\textwidth}
 \SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{1. Faces in this net?}{6}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{2. Faces should a cube net have?}{6}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{2. Opposite face 2?}{Face 5}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{3. Opposite face 2?}{Face 5}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (1,1) rectangle (2,2); \draw[thick] (-1,0) rectangle (0,1);}}{4. Does T form a cube?}{Yes — valid cube net}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (1,1) rectangle (2,2); \draw[thick] (-1,0) rectangle (0,1);}}{3. Does T form a cube?}{Yes}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{4. Faces of a cuboid?}{6}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (1,1) rectangle (2,2); \draw[thick] (-1,0) rectangle (0,1);}}{5. Faces of a cube?}{6}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{6. Faces of a cuboid?}{6}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}[t]
-\WorksheetTitle{Start Tasks - Nets}{1}
-\vspace{-0.1em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{7. What 3D shape?}{Cuboid (rectangular prism)}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,1) rectangle (1,2);}}{8. Missing what?}{The lid / top face}
-\end{column}
-
-\begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,1) rectangle (1,2);}}{9. Faces when folded?}{5 (open box, no lid)}
-\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{10. Pyramid faces?}{5 (1 square + 4 triangles)}
-\end{column}
-
-\begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{11. Triangles meet at?}{The apex (top vertex)}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,-0.866+1); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{12. Triangular prism faces?}{5}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{5. What 3D shape?}{Cuboid}
+\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{6. Pyramid faces?}{5}
 \end{column}
 \end{columns}
 \end{frame}
@@ -89,39 +67,18 @@
 \vspace{-0.1em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,-0.866+1); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{13. Rectangular faces?}{3}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (0,1) rectangle (2,2); \draw[thick] (0,2) rectangle (2,3); \draw[thick] (2,0)--(2.5,0.866)--(2.5,1.866)--(2,2.732); \draw[thick] (0,2.732)--(0.5,1.866);}}{14. Hexagonal prism faces?}{8 (6 rectangular + 2 hexagonal)}
+\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{7. Triangles meet at?}{Apex / vertex}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,0.134); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{8. Triangular prism faces?}{5}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (0,1) rectangle (2,2); \draw[thick] (0,2) rectangle (2,3); \draw[thick] (2,0)--(2.5,0.866)--(2.5,1.866)--(2,2.732); \draw[thick] (0,2.732)--(0.5,1.866);}}{15. Rectangular faces in net?}{4 visible}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{16. Distinct cube nets?}{11}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,0.134); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{9. Rectangular faces?}{3}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (0,1) rectangle (2,2); \draw[thick] (0,2) rectangle (2,3); \draw[thick] (2,0)--(2.5,0.866)--(2.5,1.866)--(2,2.732); \draw[thick] (0,2.732)--(0.5,1.866);}}{10. Hex prism faces?}{8}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{17. Shape of each face?}{Square}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-2) rectangle (2,-1); \draw[thick] (-1,-2) rectangle (0,-1);}}{18. Open box from A?}{Check by folding mentally}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}[t]
-\WorksheetTitle{Start Tasks - Nets}{1}
-\vspace{-0.1em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-2) rectangle (2,-1);}}{19. Open box from B?}{Check by folding mentally}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (0.5,-0.866)--(1.5,-0.866)--(1,0);}}{20. Tetrahedron faces?}{4}
-\end{column}
-
-\begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (0.5,-0.866)--(1.5,-0.866)--(1,0);}}{21. Face shape?}{Triangle (equilateral)}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \foreach \x in {0,2} \foreach \y in {0,2} \fill[black] (\x*0.5+0.25,\y*0.5-1.5+0.25) circle (0.07); \fill[black] (0.25,-0.75) circle (0.07);}}{22. Opposite faces sum?}{7}
-\end{column}
-
-\begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \foreach \x in {0,2} \foreach \y in {0,2} \fill[black] (\x*0.5+0.25,\y*0.5-1.5+0.25) circle (0.07); \fill[black] (0.25,-0.75) circle (0.07);}}{23. Standard die sum?}{7}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{24. Triangular faces?}{2}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (0,1) rectangle (2,2); \draw[thick] (0,2) rectangle (2,3); \draw[thick] (2,0)--(2.5,0.866)--(2.5,1.866)--(2,2.732); \draw[thick] (0,2.732)--(0.5,1.866);}}{11. Rectangular faces in net?}{4}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{12. Distinct cube nets?}{11}
 \end{column}
 \end{columns}
 \end{frame}
@@ -131,12 +88,54 @@
 \vspace{-0.1em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{25. Total faces?}{5 (2 triangles + 3 rectangles)}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (2,1) rectangle (3,2); \draw[thick] (2,2) rectangle (3,3);}}{26. Open box from L?}{Check by folding mentally}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-2) rectangle (2,-1); \draw[thick] (-1,-2) rectangle (0,-1);}}{13. Open box from A?}{Check by folding}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-2) rectangle (2,-1);}}{14. Open box from B?}{Check by folding}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{27. 3D shape name?}{Cube}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (0.5,-0.866)--(1.5,-0.866)--(1,0);}}{15. Tetrahedron faces?}{4}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (0.5,-0.866)--(1.5,-0.866)--(1,0);}}{16. Face shape?}{Triangle}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \foreach \x in {0,2} \foreach \y in {0,2} \fill[black] (\x*0.5+0.25,\y*0.5-1.5+0.25) circle (0.07); \fill[black] (0.25,-0.75) circle (0.07);}}{17. Opposite faces sum?}{7}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{18. Triangular faces?}{2}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks - Nets}{1}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{19. Total faces?}{5}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (2,1) rectangle (3,2); \draw[thick] (2,2) rectangle (3,3);}}{20. Open box from L?}{Check by folding}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,1) rectangle (1,2);}}{21. Missing what?}{The lid / top face}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,1) rectangle (1,2);}}{22. Faces when folded?}{5}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{23. 3D shape name?}{Cube}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{24. Shape of each face?}{Square}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Start Tasks - Nets}{1}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{25. Different-sized face pairs?}{3 pairs}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{26. Sketch and label opposite face 1.}{Face 6 is opposite}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{27. Different pyramid net?}{e.g. 4 triangles in a row}
 \end{column}
 
 \begin{column}{0.33\textwidth}

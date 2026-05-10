@@ -8,7 +8,6 @@
 \usepackage[sfdefault,lf]{FiraSans}
 \renewcommand{\familydefault}{\sfdefault}
 \setlength{\parindent}{0pt}
-\everymath{\displaystyle}
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{}
 \setbeamertemplate{headline}{}
@@ -43,12 +42,12 @@
 \begin{document}
 
 \begin{frame}[t]
-\WorksheetTitle{Push Tasks - Nets}{3}
+\WorksheetTitle{Push Tasks - Nets and SA}{3}
 \vspace{-0.1em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{1. Invalid arrangements?}{e.g. 4 in a row with 2 on same side — overlaps}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{2. Why some fail?}{Adjacent squares overlap when folded}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{1. Invalid arrangements?}{e.g. 4 in a row with 2 on same side}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{2. Why some fail?}{Overlap when folded}
 \end{column}
 
 \begin{column}{0.33\textwidth}
@@ -64,79 +63,79 @@
 \end{frame}
 
 \begin{frame}[t]
-\WorksheetTitle{Push Tasks - Nets}{3}
+\WorksheetTitle{Push Tasks - Nets and SA}{3}
 \vspace{-0.1em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \foreach \x in {0,2} \foreach \y in {0,2} \fill[black] (\x*0.5+0.25,\y*0.5-1.5+0.25) circle (0.07); \fill[black] (0.25,-0.75) circle (0.07);}}{7. Different die net?}{Any valid cube net works}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \foreach \x in {0,2} \foreach \y in {0,2} \fill[black] (\x*0.5+0.25,\y*0.5-1.5+0.25) circle (0.07); \fill[black] (0.25,-0.75) circle (0.07);}}{7. Different die net?}{Any valid cube net}
 \SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{8. Triangles isosceles?}{Two equal sides by symmetry}
 \end{column}
 
 \begin{column}{0.33\textwidth}
 \SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{9. Different net?}{Swap triangle positions}
-\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{10. Triangles congruent?}{Yes — same base and slant height}
+\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{10. Triangles congruent?}{Same base and slant height}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{11. Rectangular pyramid?}{Net: 1 rect + 4 triangles (2 pairs)}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,-0.866+1); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{12. Right triangle prism?}{Rectangles + 2 right triangles}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}[t]
-\WorksheetTitle{Push Tasks - Nets}{3}
-\vspace{-0.1em}
-\begin{columns}[T,onlytextwidth]
-\begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (0,1) rectangle (2,2); \draw[thick] (0,2) rectangle (2,3); \draw[thick] (2,0)--(2.5,0.866)--(2.5,1.866)--(2,2.732); \draw[thick] (0,2.732)--(0.5,1.866);}}{13. Distinct nets?}{Many — 2 hexagons + 6 rectangles}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (0,1) rectangle (2,2); \draw[thick] (0,2) rectangle (2,3); \draw[thick] (2,0)--(2.5,0.866)--(2.5,1.866)--(2,2.732); \draw[thick] (0,2.732)--(0.5,1.866);}}{14. Hex prism SA?}{$2\times10.39+6\times10=80.78$ cm$^2$}
-\end{column}
-
-\begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (0.5,-0.866)--(1.5,-0.866)--(1,0);}}{15. Tetrahedron nets?}{2 distinct nets}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (0.5,-0.866)--(1.5,-0.866)--(1,0);}}{16. Why 4 triangles?}{4 faces, all triangles}
-\end{column}
-
-\begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,1) rectangle (1,2);}}{17. Lid positions?}{Depends on shape}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,1) rectangle (1,2);}}{18. V=12 no top SA?}{Depends on dimensions}
+\SymAns{\tikz[x=0.5cm,y=0.5cm,thick]{\def\s{1.5}\def\h{1.8} \draw (0,0) rectangle (\s,\s); \draw (\s,0)--(\s+\h,\s/2)--(\s,\s); \draw (0,0)--(-\h,\s/2)--(0,\s); \draw (0,\s)--(\s/2,\s+\h)--(\s,\s); \draw (\s,0)--(\s/2,-\h)--(0,0);}}{11. Pyramid SA: base 25, tri 15 each?}{25 + 4x15 = 85 cm$^2$}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (1,0)--(2,0)--(2,1)--(1,1)--cycle; \draw[thick] (0,0)--(0,1)--(1,1)--(1,0); \draw[thick] (0,1)--(0.5,0.134); \draw[thick] (1,1)--(2,1)--(2.5,0.134)--(0.5,0.134);}}{12. Right triangle prism net?}{Rectangles + 2 triangles}
 \end{column}
 \end{columns}
 \end{frame}
 
 \begin{frame}[t]
-\WorksheetTitle{Push Tasks - Nets}{3}
+\WorksheetTitle{Push Tasks - Nets and SA}{3}
 \vspace{-0.1em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{19. Shortest surface path?}{Unfold net, draw straight line}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (2,1) rectangle (3,2); \draw[thick] (2,2) rectangle (3,3);}}{20. L as cube net?}{Only if 6th square added correctly}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (0,1) rectangle (2,2); \draw[thick] (0,2) rectangle (2,3); \draw[thick] (2,0)--(2.5,0.866)--(2.5,1.866)--(2,2.732); \draw[thick] (0,2.732)--(0.5,1.866);}}{13. Hex prism SA side 2, len 5?}{80.78 cm$^2$}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (0.5,-0.866)--(1.5,-0.866)--(1,0);}}{14. Tetrahedron nets?}{2 distinct nets}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-2) rectangle (2,-1); \draw[thick] (-1,-2) rectangle (0,-1);}}{21. 2 non-box pentominoes?}{I-pentomino (straight) and X-pentomino}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-2) rectangle (2,-1);}}{22. All open box nets?}{11 pentominoes can form open box}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0)--(1,0)--(0.5,-0.866)--cycle; \draw[thick] (0,0)--(-0.5,0.866)--(0.5,0.866)--(1,0); \draw[thick] (0.5,-0.866)--(1.5,-0.866)--(1,0);}}{15. Why 4 triangles?}{4 triangular faces}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,1) rectangle (1,2);}}{16. V=12 no top SA?}{Depends on dimensions}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{23. 1x1x96 max paper?}{Long thin shape = huge surface area}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{24. 4x6x4 min paper proof?}{Closest to cube = minimal SA}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{17. Shortest surface path?}{Unfold net, draw line}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (2,1) rectangle (3,2); \draw[thick] (2,2) rectangle (3,3);}}{18. L as cube net?}{Only with 6th square}
 \end{column}
 \end{columns}
 \end{frame}
 
 \begin{frame}[t]
-\WorksheetTitle{Push Tasks - Nets}{3}
+\WorksheetTitle{Push Tasks - Nets and SA}{3}
 \vspace{-0.1em}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{25. Ribbon on faces?}{3.8 m on faces, 0.2 m knot}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \foreach \x in {0,2} \foreach \y in {0,2} \fill[black] (\x*0.5+0.25,\y*0.5-1.5+0.25) circle (0.07); \fill[black] (0.25,-0.75) circle (0.07);}}{26. Min colours?}{3 (opposite faces same colour)}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-2) rectangle (2,-1); \draw[thick] (-1,-2) rectangle (0,-1);}}{19. 2 non-box pentominoes?}{I and X pentominoes}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{20. 1x1x96 max paper?}{Long thin = huge SA}
 \end{column}
 
 \begin{column}{0.33\textwidth}
-\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{27. Shortest path?}{Draw net, connect start to end}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{21. 4x6x4 min paper proof?}{Closest to cube}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \foreach \x in {0,2} \foreach \y in {0,2} \fill[black] (\x*0.5+0.25,\y*0.5-1.5+0.25) circle (0.07); \fill[black] (0.25,-0.75) circle (0.07);}}{22. Min colours?}{3 (opposite faces same)}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,-2) rectangle (1,-1); \draw[thick] (1,-1) rectangle (2,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (2,-1) rectangle (3,0); \node[scale=0.8] at (0.5,-0.5) {1}; \node[scale=0.8] at (0.5,-1.5) {2}; \node[scale=0.8] at (1.5,-0.5) {3}; \node[scale=0.8] at (-0.5,-0.5) {4}; \node[scale=0.8] at (2.5,-0.5) {5}; \node[scale=0.8] at (0.5,0.5) {6};}}{23. Shortest path?}{Draw net, straight line}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (3,0); \draw[thick] (1.5,0)--(1.5,1); \draw[thick] (0,1)--(0,1.5)--(1.5,2)--(3,1.5)--(3,1); \node[scale=0.6] at (1.5,-0.5) {3 m}; \node[scale=0.6] at (1.5,1.5) {2 m};}}{24. Ribbon on faces?}{3.8 m on faces}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}[t]
+\WorksheetTitle{Push Tasks - Nets and SA}{3}
+\vspace{-0.1em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{25. SA=150, side then V?}{Side=5, V=125 cm$^3$}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (2,1); \draw[thick] (0,-1) rectangle (2,0); \draw[thick] (0,-2) rectangle (2,-1); \draw[thick] (2,-1) rectangle (3,0); \draw[thick] (-1,-1) rectangle (0,0); \draw[thick] (0,1) rectangle (2,2); \node[scale=0.7] at (1,0.5) {5}; \node[scale=0.7] at (1,-1.5) {2}; \node[scale=0.7] at (1,-0.5) {3}; \node[scale=0.7] at (-0.5,-0.5) {4}; \node[scale=0.7] at (2.5,-0.5) {5}; \node[scale=0.7] at (1,1.5) {1};}}{26. 8x3x2 wrap cost \$0.05/cm$^2$?}{SA=92, cost=\$4.60}
+\end{column}
+
+\begin{column}{0.33\textwidth}
+\SymAns{\tikz[x=0.5cm,y=0.5cm]{\draw[thick] (0,0) rectangle (1,1); \draw[thick] (1,0) rectangle (2,1); \draw[thick] (2,0) rectangle (3,1); \draw[thick] (0,-1) rectangle (1,0); \draw[thick] (0,1) rectangle (1,2);}}{27. Open-top max volume?}{Depends on card size}
 \end{column}
 
 \begin{column}{0.33\textwidth}
