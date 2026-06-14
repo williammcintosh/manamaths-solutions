@@ -1,0 +1,74 @@
+\documentclass[aspectratio=169,12pt]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage[sfdefault,lf]{FiraSans}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\everymath{\displaystyle}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{headline}{}
+\definecolor{mmpageWhite}{HTML}{FCFBF7}
+\definecolor{mmtanSoft}{HTML}{F7F5EF}
+\definecolor{mmgreenDeep}{HTML}{244B2C}
+\definecolor{mmgreenLeaf}{HTML}{5D8A56}
+\definecolor{mmtext}{HTML}{163221}
+\definecolor{mmanswerColor}{HTML}{306A3A}
+\setbeamercolor{background canvas}{bg=mmpageWhite}
+\setbeamercolor{normal text}{fg=mmtext,bg=mmpageWhite}
+\newtcolorbox{MMProblemCard}[1][]{enhanced,breakable=false,colback=white,colframe=black,boxrule=1.0pt,arc=5pt,left=3pt,right=3pt,top=2pt,bottom=2pt,before skip=0pt,after skip=0pt,height=0.22\textheight,valign=top,#1}
+\newcommand{\KoruIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/header-logo.png}}}
+\newcommand{\HoeIcon}{\raisebox{-0.2em}{\includegraphics[height=1.05em]{img/hoe.png}}}
+\newcommand{\ScaffoldIcons}[1]{\ifcase#1\or \HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\or \HoeIcon\hspace{0.22em}\HoeIcon\hspace{0.22em}\HoeIcon\fi}
+\newcommand{\WorksheetTitle}[2]{%{
+  \colorbox{mmtanSoft}{\parbox[c][2.0em][c]{0.975\linewidth}{\hspace{0.25em}{\Large\bfseries\textcolor{mmgreenDeep}{#1}\hfill\ScaffoldIcons{#2}}}}
+  \par\vspace{0.08em}{\color{mmgreenLeaf}\rule{\linewidth}{2.0pt}}\par\vspace{0.04em}}
+\newcommand{\MMAnswer}[2]{\begin{MMProblemCard}\raggedright\small\textbf{#1.} \textcolor{mmanswerColor}{\textbf{#2}}\par\end{MMProblemCard}}
+\setbeamertemplate{background}{\begin{tikzpicture}[remember picture,overlay]\draw[black,line width=1.5pt,rounded corners=10pt]([xshift=0.45cm,yshift=-0.45cm]current page.north west) rectangle ([xshift=-0.45cm,yshift=0.45cm]current page.south east);\end{tikzpicture}}
+\begin{document}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks - Answers}{2}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{1}{$\angle QPR$ or $\angle RPQ$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{2}{$\angle RPS$ or $\angle SPR$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{3}{$\angle SPQ$ or $\angle QPS$}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{4}{$\angle BAC$ or $\angle CAB$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{5}{$\angle CAD$ or $\angle DAC$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{6}{$\angle DAB$ or $\angle BAD$}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{7}{$\angle UTW$ or $\angle WTU$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{8}{$\angle VTW$ or $\angle WTV$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{9}{$\angle VTW$ or $\angle WTV$}\end{column}
+\end{columns}
+\end{frame}
+\begin{frame}[t]
+\WorksheetTitle{Build Tasks - Answers}{2}
+\vspace{-0.18em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{10}{$\angle POR$ or $\angle ROP$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{11}{$\angle ROQ$ or $\angle QOR$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{12}{$\angle QOP$ or $\angle POQ$}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{13}{$\angle XYV$ or $\angle VYX$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{14}{$\angle VYZ$ or $\angle ZYV$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{15}{$\angle ZYX$ or $\angle XYZ$}\end{column}
+\end{columns}
+\vspace{0.45em}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.32\textwidth}\MMAnswer{16}{$\angle ABF$ or $\angle FBA$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{17}{$\angle CBD$ or $\angle DBC$}\end{column}
+\begin{column}{0.32\textwidth}\MMAnswer{18}{$\angle ECA$ or $\angle ACE$}\end{column}
+\end{columns}
+\end{frame}
+\end{document}
